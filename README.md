@@ -8,6 +8,11 @@ This project is to practice basic Rectangle comparison techniques.
 
 To run the application simply execute the project main using Java. Once the program has started you will be prompted for various rectangle details. After the information has been collected the program will tell you different facts about the rectangles.
 
+### How to Run
+This application leveraged the gradle wrapper for complication and execution.
+
+`./gradlew clean build run --console=plain`
+
 ## Example Output
 
 ```bash

@@ -1,0 +1,40 @@
+plugins {
+    id "application"
+}
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin : "java"
+
+ext {
+    javaMainClass = "org.test.rectangle.Main"
+}
+
+application {
+    mainClassName = javaMainClass
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+}
+
+run {
+    standardInput = System.in
+}
+
+tasks.withType(Test) {
+    testLogging {
+        exceptionFormat "full"
+        events "skipped", "passed", "failed"
+        showStandardStreams true
+    }
+}
+
+test {
+    useJUnit()
+}
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17

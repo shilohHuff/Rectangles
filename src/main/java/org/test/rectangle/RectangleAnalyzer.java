@@ -1,4 +1,4 @@
-package main;
+package org.test.rectangle;
 
 public class RectangleAnalyzer {
 
